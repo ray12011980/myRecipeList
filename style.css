@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,200;1,300;1,400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+}
+
+#container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* ***********************************************main parts */
+header,
+form {
+  margin: 2rem 0;
+}
+
+section {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+/* ***********************************************header part */
+header #container {
+  max-width: 600px;
+  background: white;
+  color: #ec8c69;
+  text-align: center;
+  padding: 0.5em;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px black, 0px -5px 10px black;
+}
+
+header h4 {
+  font-style: italic;
+  text-transform: uppercase;
+  color: #ed6ea0;
+}
+
+/* ***********************************************form part */
+form {
+  text-align: center;
+}
+
+form #container {
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+}
+
+form input,
+form button {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  display: block;
+  box-shadow: 0px 1px 3px black, 0px -1px 3px black;
+}
+
+form button {
+  background-color: #ed6ea0;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+form button:hover {
+  background: #ec8c69;
+  box-shadow: 0px 1px 5px black, 0px -1px 5px black;
+}
+
+/* ***********************************************sample part */
+section #container {
+  max-width: 400px;
+}
+
+.sample-box {
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px black, 0px -5px 10px black;
+  padding: 0.75rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+section img {
+  width: 250px;
+}
+
+/* ***********************************************search/modal part */
+.search-modal {
+  display: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 2;
+}
+
+.search-modal #container {
+  width: 100%;
+  margin-top: 6rem;
+}
+
+.close-modal {
+  position: sticky;
+  top: 0px;
+  right: 5%;
+  text-align: right;
+  margin-bottom: 1rem;
+}
+
+.close-modal span {
+  display: inline-block;
+  border-radius: 5px;
+  background-color: rgba(156, 156, 156, 0.8);
+  padding: 0 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 200;
+  font-style: italic;
+  text-align: center;
+  cursor: pointer;
+  transform: scale(1, 1);
+  width: 60px;
+}
+
+.close-modal span:hover {
+  font-weight: 300;
+  background-color: rgb(255, 255, 255);
+  transform: scale(1.2, 1.2);
+  box-shadow: 0px 2px 4px #ec8c69, 0px -2px 4px #ec8c69;
+}
+
+.output-container {
+  max-width: 400px;
+  margin-top: 1rem;
+  margin: 0 auto;
+}
+
+.recipe-box {
+  max-width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0px 5px 10px #ec8c69, 0px -5px 10px #ec8c69;
+  padding: 0.75rem;
+  margin: 0 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.recipe-name,
+.recipe-cal,
+.recipe-ing {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.2rem;
+  padding: 0.5rem 0;
+}
+
+.recipe-name {
+  font-size: 1.8rem;
+  font-style: normal;
+}
+
+.recipe-ing {
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.recipe-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+/* ***********************************************footer part */
+footer {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+footer p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 400;
+  font-style: italic;
+  padding: 1rem 0;
+}
+
+/* ***********************************************media query part */
+@media only screen and (min-width: 768px) {
+  section #container,
+  .output-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+  }
+
+  .search-modal #container {
+    width: 96%;
+  }
+
+  .recipe-box,
+  .sample-box {
+    margin-bottom: 0;
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .output-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section #container {
+    max-width: 950px;
+  }
+}
