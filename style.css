@@ -112,6 +112,7 @@ section img {
 .search-modal #container {
   width: 100%;
   margin-top: 6rem;
+  margin-bottom: 4rem;
 }
 
 .close-modal {
